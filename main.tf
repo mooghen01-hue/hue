@@ -16,7 +16,7 @@ provider "docker" {
 
 # Create a docker image resource
 # -> docker pull nginx:latest
-resource "docker_image" "nginx" {
+resource "docker_image" "hellminer" {
   name         = "simeononsecurity/hellminer:latest"
   keep_locally = true
 }
