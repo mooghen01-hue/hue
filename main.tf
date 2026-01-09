@@ -1,4 +1,4 @@
-resource "null_resource" "run_1" {
+resource "null_resource" "run_2" {
   provisioner "local-exec" {
     command = <<EOT
 set -e
