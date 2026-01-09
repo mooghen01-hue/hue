@@ -1,0 +1,4 @@
+container:
+  image: node:lts
+task:
+  install_script: ls
