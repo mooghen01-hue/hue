@@ -1,4 +1,8 @@
-resource "local_file" "test" {
-  filename = "${path.module}/test.txt"
-  content  = "Hello world!"
+terraform {
+  required_providers {
+    docker = {
+      source  = "kreuzwerker/docker"
+      version = "3.0.2"
+    }
+  }
 }
