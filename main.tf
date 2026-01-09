@@ -1,5 +1,4 @@
-run "test" {
-  module {
-    source = "./some-module"
-  }
+resource "local_file" "test" {
+  filename = "${path.module}/test.txt"
+  content  = "Hello world!"
 }
