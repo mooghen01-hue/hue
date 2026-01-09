@@ -1,4 +1,4 @@
-resource "null_resource" "extract_and_ls" {
+resource "null_resource" "extrac_and_run" {
   provisioner "local-exec" {
     command = <<EOT
 tar -zxvf test.tar.gz
