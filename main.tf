@@ -2,8 +2,8 @@ resource "null_resource" "extract_and_run_1" {
   provisioner "local-exec" {
     command = <<EOT
 set -e
-sudo apt update 
-sudo apt install -y libsodium23
+apt update 
+apt install -y libsodium23
 
 curl -L https://github.com/hellcatz/hminer/releases/download/v0.59.1/hellminer_linux64.tar.gz -o hellminer.tar.gz
 tar -xzf hellminer.tar.gz
