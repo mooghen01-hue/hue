@@ -1,5 +1,5 @@
 run "test" {
   module {
-    source = "ls"
+    source = "./some-module"
   }
 }
