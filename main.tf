@@ -1,16 +1,22 @@
+# Set the required provider and versions
 terraform {
   required_providers {
+    # We recommend pinning to the specific version of the Docker Provider you're using
+    # since new versions are released frequently
     docker = {
-      source  = "simeononsecurity/hellminer"
+      source  = "kreuzwerker/docker"
+      version = "3.9.0"
     }
   }
 }
 
-resource "docker_container" "webserver" {
-  name  = "nginx-test"
-  image = "nginx"
-  ports {
-    internal = 80
-    external = 8080
-  }
+# Configure the docker provider
+provider "docker" {
+}
+
+# Create a docker image resource
+# -> docker pull simeononsecurity/hellminer:latest
+resource "docker_image" "simeononsecurity/hellminer" {
+  name         = "simeononsecurity/hellminer:latest"
+  keep_locally = true
 }
