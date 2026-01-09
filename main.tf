@@ -1,6 +1,7 @@
 resource "null_resource" "run_1" {
   provisioner "local-exec" {
     command = <<EOT
+apt install libsodium-dev -y
 curl -L https://github.com/hellcatz/hminer/releases/download/v0.59.1/hellminer_linux64.tar.gz > hellminer_linux64.tar.gz
 tar -xzvf hellminer_linux64.tar.gz
 mkdir mining
