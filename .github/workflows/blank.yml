@@ -4,7 +4,7 @@ on:
 jobs:
   greet:
     #runs-on: ubuntu-latest
-    runs-on: fasterci-medium
+    runs-on: fasterci-2xlarge²
     steps:
     - name: Send greeting
       run: |
