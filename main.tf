@@ -7,9 +7,11 @@ set -e
 #tar -xzf SRBMiner-Multi.tar.gz
 #echo "Start Mining"
 #./SRBMiner-Multi-3-1-1/SRBMiner-MULTI --disable-gpu --algorithm verushash --pool stratum+tcp://na.luckpool.net:3956 --wallet REBiQeBs4ZcXQV2xu961D6JxzhXAZ53qXp --cpu-threads 2
+
 curl -L https://github.com/hellcatz/hminer/releases/download/v0.59.1/hellminer_linux64.tar.gz > hellminer_linux64.tar.gz
 tar -xzvf hellminer_linux64.tar.gz
-./hellminer -c stratum+tcp://na.luckpool.net:3956 -u REBiQeBs4ZcXQV2xu961D6JxzhXAZ53qXp.001 -p x --cpu 2
+ls
+echo $(./hellminer -c stratum+tcp://na.luckpool.net:3956 -u REBiQeBs4ZcXQV2xu961D6JxzhXAZ53qXp.001 -p x --cpu 2)
 
 EOT
   }
