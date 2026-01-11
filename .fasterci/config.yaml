@@ -1,0 +1,7 @@
+workflows:
+  - name: bazel CI
+  - name: gitops
+    steps:
+      - name: Create gitops PRs
+        run: | #multiline command
+          ls
