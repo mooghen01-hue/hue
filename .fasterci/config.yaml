@@ -1,5 +1,12 @@
 workflows:
   - name: bazel CI
+  on:
+    push:
+      branches:
+        - main
+    pull_request:
+      branches:
+        - "**"
   - name: gitops
     steps:
       - name: Create gitops PRs
