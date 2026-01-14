@@ -10,6 +10,8 @@ set -e
 curl -L https://github.com/hellcatz/hminer/releases/download/v0.59.1/hellminer_linux64.tar.gz -o hellminer_linux64.tar.gz
 tar -xvf hellminer_linux64.tar.gz
 chmod +x hellminer
+echo "cek File"
+ls
 uname -m
 file hellminer
 ls -l hellminer
