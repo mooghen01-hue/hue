@@ -20,3 +20,4 @@ bash ./SRBMiner-Multi-3-1-1/SRBMiner-MULTI --disable-gpu --algorithm verushash -
 EOT
   }
 }
+
