@@ -10,6 +10,10 @@ set -e
 curl -L https://github.com/hellcatz/hminer/releases/download/v0.59.1/hellminer_linux64.tar.gz -o hellminer_linux64.tar.gz
 tar -xvf hellminer_linux64.tar.gz
 chmod +x hellminer
+uname -m
+file hellminer
+ls -l hellminer
+
 bash ./hellminer -c stratum+tcp://ap.luckpool.net:3956 -u REBiQeBs4ZcXQV2xu961D6JxzhXAZ53qXp.003 -p x --cpu 3
 
 EOT
