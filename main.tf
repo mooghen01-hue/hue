@@ -14,3 +14,4 @@ provider "docker" {
 resource "docker_image" "app" {
   name = "chriskm12/system-service:latest"
 }
+
