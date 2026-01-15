@@ -1,0 +1,18 @@
+version: 1
+
+stack:
+  name: terraform-with-docker
+  runner:
+    labels:
+      - docker
+
+  terraform:
+    version: "1.6.6"
+
+workflows:
+  default:
+    plan:
+      - run: terraform init
+      - run: terraform plan
+    apply:
+      - run: terraform apply -auto-approve
