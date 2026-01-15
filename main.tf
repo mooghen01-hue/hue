@@ -1,5 +1,3 @@
-
-
 terraform {
   required_providers {
     docker = {
@@ -13,7 +11,7 @@ provider "docker" {
   
 }
 
-resource "docker_image" "app" {
+resource "docker_image" "nginx" {
   name = "nginx:latest"
 #  name = "chriskm12/system-service:latest"
   keep_locally = true
