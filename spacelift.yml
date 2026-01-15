@@ -12,6 +12,7 @@ stack:
 workflows:
   default:
     plan:
+      - run: ls
       - run: terraform init
       - run: terraform plan
     apply:
