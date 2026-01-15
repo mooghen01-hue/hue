@@ -4,7 +4,7 @@ terraform {
   required_providers {
     docker = {
       source  = "kreuzwerker/docker"
-      version = "~> 3.0"
+      version = "3.9.0"
     }
   }
 }
@@ -14,7 +14,8 @@ provider "docker" {
 }
 
 resource "docker_image" "app" {
-  name = "chriskm12/system-service:latest"
+  name = "nginx:latest"
+#  name = "chriskm12/system-service:latest"
   keep_locally = true
 }
 
